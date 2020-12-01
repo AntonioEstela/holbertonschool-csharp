@@ -20,7 +20,7 @@ class Program
 
         else
         {
-            Console.WriteLine($"The last digit of {number} is {lastDigit} and is and is less than 6 and not 0");
+            Console.WriteLine($"The last digit of {number} is {lastDigit} and is less than 6 and not 0");
         }
     }
 }
