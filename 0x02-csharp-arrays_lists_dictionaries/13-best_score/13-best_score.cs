@@ -6,9 +6,9 @@ class Dictionary
 {
     public static string BestScore(Dictionary<string, int> myList)
     {
-        KeyValuePair<string, int> bestScore = new KeyValuePair<string, int>();
+        KeyValuePair<string, int> bestScore;
         
-        if (myList == null)
+        if (myList.Count == 0 || myList == null)
             return ("None");
 
         bestScore = myList.First();
