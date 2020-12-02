@@ -16,6 +16,7 @@ class List
             if (i == index)
             {
                 myList.Remove(myList[i]);
+                break;
             }
         }
         return (myList);
