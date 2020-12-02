@@ -16,7 +16,7 @@ namespace _14_rectangular_array
                 {
 
                     Console.Write(array2D[i, j]);
-                    if (j < array2D.Length)
+                    if (j < 5)
                         Console.Write(" ");
                 }
                 Console.Write("\n");
