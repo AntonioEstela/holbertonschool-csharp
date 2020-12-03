@@ -9,10 +9,10 @@ class LList
 
         while (node.Next != null)
         {
-            if (node.Value < n && node.Next.Value > n)
-                return(myLList.AddAfter(node, n));
+            if (node.Value < n )
+                node = node.Next;
 
-            node = node.Next;
+            return(myLList.AddBefore(node, n));
         }
 
         return (myLList.AddLast(n));
