@@ -15,6 +15,6 @@ class LList
             index++;
         }
 
-        return (index);
+        return (0);
     }
 }
