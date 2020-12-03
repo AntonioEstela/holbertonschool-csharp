@@ -7,7 +7,7 @@ class LList
     {
         LinkedListNode<int> node = myLList.First;
 
-        while (node)
+        while (node != null)
         {
             if (node.Value < n )
                 node = node.Next;
