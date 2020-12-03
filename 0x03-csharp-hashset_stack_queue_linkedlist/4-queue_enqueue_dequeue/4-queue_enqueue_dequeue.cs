@@ -13,7 +13,7 @@ class MyQueue
             Console.WriteLine("Queue is empty");
 
         else
-            Console.WriteLine("Top item: {0}", aQueue.Peek());
+            Console.WriteLine("First item: {0}", aQueue.Peek());
 
         // Add a new given item newItem to aQueue
         aQueue.Enqueue(newItem);
