@@ -11,7 +11,10 @@ class LList
         while (node.Next != null)
         {
             if (node.Value < n && node.Next.Value > n)
+            {
                 newNode = myLList.AddAfter(node, n);
+                break;
+            }
             node = node.Next;
         }
 
