@@ -47,7 +47,7 @@ namespace Enemies
         /// <summary>Public method that returns the string representation of the Zombie instance</summary>
         public override string ToString()
         {
-            return ($"Zombie name: {this.name} / Total Health: {this.health}");
+            return ($"Zombie Name: {this.name} / Total Health: {this.health}");
         }
     }
 }
