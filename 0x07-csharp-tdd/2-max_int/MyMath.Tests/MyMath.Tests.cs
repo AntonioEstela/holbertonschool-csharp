@@ -32,9 +32,15 @@ namespace Tests
         }
 
         [Test]
-        public void Test_when_list_empty()
+        public void Test_when_list_null()
         {
             Assert.AreEqual(MyMath.Operations.Max(null), 0);
+        }
+
+        [Test]
+        public void Test_when_list_empty()
+        {
+            Assert.AreEqual(MyMath.Operations.Max(new List<int>()), 0);
         }
     }
 }

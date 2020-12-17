@@ -11,7 +11,7 @@ namespace MyMath
         /// <summary>Find the max integer in a list</summary>
         public static int Max(List<int> nums)
         {
-            if (nums == null)
+            if (nums == null || nums.Count == 0)
                 return 0;
 
             int maxInt = nums.First();
