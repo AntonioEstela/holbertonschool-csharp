@@ -39,7 +39,7 @@ namespace Tests
                 {20, 25, 30},
             };
 
-            Assert.AreEqual(MyMath.Matrix.Divide(myMatrix, 0), null);
+            Assert.IsNull(MyMath.Matrix.Divide(myMatrix, 0));
         }
         [Test]
 
@@ -47,7 +47,7 @@ namespace Tests
         public void Test_when_matrix_is_null()
         {
             int[,] myMatrix = null;
-            Assert.AreEqual(MyMath.Matrix.Divide(myMatrix, 1), null);
+            Assert.IsNull(MyMath.Matrix.Divide(myMatrix, 3));
         }
 
         [Test]
