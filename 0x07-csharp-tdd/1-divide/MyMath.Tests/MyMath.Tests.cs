@@ -1,76 +1,48 @@
 using NUnit.Framework;
-using System;
 
-namespace Tests
+namespace MyMath.Tests
 {
-    [TestFixture]
-    /// <summary>Provides some testcases for Matrix class.</summary>
-    public class MatrixTests
+    public class MyMath_Matrix_Tests
     {
-        [Test]
-
-        /// <summary>Tests when the matrix is divided by a positive integer</summary>
-        public void Test_when_divisor_is_positive([Random(1, 9, 10)]int num)
+        [SetUp]
+        public void Setup()
         {
-            int[,] myMatrix = new int[,] {
-                {5, 10, 15},
-                {20, 25, 30},
-            };
+        }
 
-            int[,] result = new int[2, 3];
-
-            for (int row = 0; row < 2; row++)
+        [Test]
+        public void Matrix_Divided_By_Positive()
+        {
+            int[,] matrix = new int[,]
             {
-                for (int column = 0; column < 3; column++)
-                {
-                    result[row, column] = myMatrix[row, column] / num;
-                }
-            }
-
-            Assert.AreEqual(MyMath.Matrix.Divide(myMatrix, num), result);
-        }
-
-        [Test]
-        /// <summary>Tests when divisor is 0.</summary>
-        public void Test_when_divisor_is_zero()
-        {
-            int[,] myMatrix = new int[,] {
-                {5, 10, 15},
-                {20, 25, 30},
+                {2, 3, 1},
+                {10, 20, 30},
+                {5, 10, 15}
             };
-
-            Assert.IsNull(MyMath.Matrix.Divide(myMatrix, 0));
-        }
-        [Test]
-
-        /// <summary>Test when the matrix is null.</summary>
-        public void Test_when_matrix_is_null()
-        {
-            int[,] myMatrix = null;
-            Assert.IsNull(MyMath.Matrix.Divide(myMatrix, 3));
+            int num = 3;
+            int[,] result = Matrix.Divide(matrix, num);
+            Assert.AreEqual(result, new int[,]{{0, 1, 0},{3, 6, 10},{1, 3, 5}});
         }
 
         [Test]
-
-        /// <summary>Tests when the matrix is divided by a positive integer</summary>
-        public void Test_when_divisor_is_negative([Random(-9, -1, 10)]int num)
+        public void Matrix_Is_Null()
         {
-            int[,] myMatrix = new int[,] {
-                {5, 10, 15},
-                {20, 25, 30},
-            };
-
-            int[,] result = new int[2, 3];
-
-            for (int row = 0; row < 2; row++)
+            int[,] matrix = null;
+            int num = 3;
+            int[,] result = Matrix.Divide(matrix, num);
+            Assert.IsNull(result);
+        }
+        [Test]
+        public void Num_is_0()
+        {
+            int[,] matrix = new int[,]
             {
-                for (int column = 0; column < 3; column++)
-                {
-                    result[row, column] = myMatrix[row, column] / num;
-                }
-            }
-
-            Assert.AreEqual(MyMath.Matrix.Divide(myMatrix, num), result);
+                {2, 3, 1},
+                {10, 20, 30},
+                {5, 10, 15}
+            };
+            int num = 0;
+            int[,] result = Matrix.Divide(matrix, num);
+            Assert.IsNull(result);
         }
     }
 }
