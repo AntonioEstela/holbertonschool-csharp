@@ -16,17 +16,16 @@ namespace MyMath
             {
                 int rows = matrix.GetLength(0);
                 int columns = matrix.GetLength(1);
-                int[,] result = new int[rows, columns];
 
                 for (int row = 0; row < 2; row++)
                 {
                     for (int column = 0; column < 3; column++)
                     {
-                        result[row, column] = matrix[row, column] / num;
+                        matrix[row, column] = matrix[row, column] / num;
                     }
                 }
 
-                return result;
+                return matrix;
             }
             catch (DivideByZeroException)
             {
