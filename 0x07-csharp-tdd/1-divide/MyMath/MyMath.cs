@@ -17,9 +17,9 @@ namespace MyMath
                 int rows = matrix.GetLength(0);
                 int columns = matrix.GetLength(1);
 
-                for (int row = 0; row < 2; row++)
+                for (int row = 0; row < rows; row++)
                 {
-                    for (int column = 0; column < 3; column++)
+                    for (int column = 0; column < columns; column++)
                     {
                         matrix[row, column] = matrix[row, column] / num;
                     }
