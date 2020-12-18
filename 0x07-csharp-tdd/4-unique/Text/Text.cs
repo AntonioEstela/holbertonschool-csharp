@@ -13,10 +13,7 @@ namespace Text
             {
                 char letter = s[i];
                 if (s.IndexOf(letter) == i && s.IndexOf(letter, i + 1) == -1)
-                {
-                    Console.WriteLine(i);
                     return i;
-                }
             }
 
             return -1;
