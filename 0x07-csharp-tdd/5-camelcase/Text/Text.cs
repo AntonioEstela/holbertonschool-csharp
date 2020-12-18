@@ -18,7 +18,6 @@ namespace Text
             {
                 if (Char.IsUpper(item))
                 {
-                    Console.WriteLine(item);
                     count++;
                 }
             }
