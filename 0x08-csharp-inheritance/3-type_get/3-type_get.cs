@@ -7,7 +7,7 @@ class Obj
     /// <summary>Prints the Properties and Methods names</summary>
     public static void Print(object myObj)
     {
-        // getting the Object name
+        /// <summary>getting the Object name</summary>
         string className = myObj.GetType().Name;
 
         // Printing the properties of the object
