@@ -5,6 +5,5 @@ class Animal
 {}
 
 /// <summary>Empty class that inherits from Animal class</summary>
-
 class Dog : Animal
 {}

@@ -14,8 +14,14 @@ class Shape
 /// <summary>Rectangle class that inherits from shape base class.</summary>
 class Rectangle : Shape
 {
+
+    // Represents the width of the Rectangle.
     private int width;
+    // Represents the heigth of the Rectangle.
     private int height;
+
+    /// <summary>Represents the width of the Rectangle.</summary>
+
     public int Width
     {
         get
@@ -32,6 +38,9 @@ class Rectangle : Shape
                 this.width = value;
         }
     }
+
+    /// <summary>Represents the height of the Rectangle.</summary>
+
     public int Height
     {
         get
@@ -66,8 +75,10 @@ class Rectangle : Shape
 /// <summary>Square class that inherits from Rectancle class.</summary>
 class Square : Rectangle
 {
+    // Int that represents the size of the square.
     private int size;
 
+    /// <summary>Int that represents the size of the square.</summary>
     public int Size
     {
         get { return this.size; }
