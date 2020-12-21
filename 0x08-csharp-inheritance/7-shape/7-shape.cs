@@ -26,7 +26,7 @@ class Rectangle : Shape
     {
         get
         {
-            return this.width;
+            return width;
         }
 
         set
@@ -35,7 +35,7 @@ class Rectangle : Shape
                 throw new ArgumentException("Width must be greater than or equal to 0");
 
             else
-                this.width = value;
+                width = value;
         }
     }
 
@@ -45,7 +45,7 @@ class Rectangle : Shape
     {
         get
         {
-            return this.height;
+            return height;
         }
 
         set
@@ -54,20 +54,20 @@ class Rectangle : Shape
                 throw new ArgumentException("Height must be greater than or equal to 0");
 
             else
-                this.height = value;
+                height = value;
         }
     }
 
     /// <summary>Method Area that returns the area of the class</summary>
     public new int Area()
     {
-        return this.height * this.width;
+        return height * width;
     }
 
     /// <summary>Returns the string representation of the class.</summary>
     public override string ToString()
     {
-        return $"[Rectangle]: {this.width} / {this.height}";
+        return $"[Rectangle]: {width} / {height}";
     }
 
 }
