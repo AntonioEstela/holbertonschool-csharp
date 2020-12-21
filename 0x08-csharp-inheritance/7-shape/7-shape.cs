@@ -15,18 +15,16 @@ class Shape
 class Rectangle : Shape
 {
 
-    // Represents the width of the Rectangle.
     private int width;
-    // Represents the heigth of the Rectangle.
     private int height;
 
-    /// <summary>Represents the width of the Rectangle.</summary>
+    /// <summary>Gets/sets the width of the Rectangle.</summary>
 
     public int Width
     {
         get
         {
-            return width;
+            return this.width;
         }
 
         set
@@ -34,18 +32,17 @@ class Rectangle : Shape
             if (value < 0)
                 throw new ArgumentException("Width must be greater than or equal to 0");
 
-            else
-                width = value;
+            this.width = value;
         }
     }
 
-    /// <summary>Represents the height of the Rectangle.</summary>
+    /// <summary>Gets/sets the height of the Rectangle.</summary>
 
     public int Height
     {
         get
         {
-            return height;
+            return this.height;
         }
 
         set
@@ -53,21 +50,20 @@ class Rectangle : Shape
             if (value < 0)
                 throw new ArgumentException("Height must be greater than or equal to 0");
 
-            else
-                height = value;
+            this.height = value;
         }
     }
 
     /// <summary>Method Area that returns the area of the class</summary>
     public new int Area()
     {
-        return height * width;
+        return this.width * this.height;
     }
 
     /// <summary>Returns the string representation of the class.</summary>
     public override string ToString()
     {
-        return $"[Rectangle]: {width} / {height}";
+        return $"[Rectangle]: {this.width} / {this.height}";
     }
 
 }
