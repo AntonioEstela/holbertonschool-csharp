@@ -19,7 +19,6 @@ class Rectangle : Shape
     private int height;
 
     /// <summary>Gets/sets the width of the Rectangle.</summary>
-
     public int Width
     {
         get
@@ -37,7 +36,6 @@ class Rectangle : Shape
     }
 
     /// <summary>Gets/sets the height of the Rectangle.</summary>
-
     public int Height
     {
         get
@@ -63,7 +61,7 @@ class Rectangle : Shape
     /// <summary>Returns the string representation of the class.</summary>
     public override string ToString()
     {
-        return $"[Rectangle]: {this.width} / {this.height}";
+        return $"[{this.GetType().Name}]: {this.width} / {this.height}";
     }
 
 }
