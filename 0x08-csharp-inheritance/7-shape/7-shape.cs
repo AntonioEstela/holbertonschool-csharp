@@ -61,7 +61,7 @@ class Rectangle : Shape
     /// <summary>Returns the string representation of the class.</summary>
     public override string ToString()
     {
-        return $"[{this.GetType().Name}]: {this.width} / {this.height}";
+        return $"[{this.GetType().Name}] {this.width} / {this.height}";
     }
 
 }
