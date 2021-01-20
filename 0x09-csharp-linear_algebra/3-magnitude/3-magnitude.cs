@@ -8,8 +8,6 @@ class VectorMath
     {
         double result = new double();
 
-        Console.WriteLine($"Length: {vector}");
-
         if (vector.Length > 3 || vector.Length < 2)
             return -1;
 
