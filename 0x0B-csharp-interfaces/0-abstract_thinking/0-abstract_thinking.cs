@@ -1,14 +1,14 @@
 using System;
 
-/// <summary>Abstract class called Base</summary>
 abstract class Base
 {
-    /// <summary>name is a public property</summary>
-    public string name;
+    public string name = null;
 
-    /// <summary>Function that overrides the ToString method</summary>
+    /// <summary>
+    /// abstract class called Base
+    /// </summary>
     public override string ToString()
     {
-        return $"{name} is {this.GetType()}";
+        return name + " is a " + this.GetType();
     }
 }
