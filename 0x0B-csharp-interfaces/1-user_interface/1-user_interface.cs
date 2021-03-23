@@ -41,7 +41,7 @@ public interface ICollectable
 }
 
 /// <summary>Class TestObject</summary>
-public class TestObject : Base, IInteractive, IBreakable, ICollectable
+class TestObject : Base, IInteractive, IBreakable, ICollectable
 {
     /// <summary>property durability</summary>
     public int durability { get; set; }
