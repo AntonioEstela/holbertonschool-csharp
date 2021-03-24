@@ -48,6 +48,9 @@ class TestObject : Base, IInteractive, IBreakable, ICollectable
 
     /// <summary>property isCollected</summary>
 	public bool isCollected { get; set; }
+	
+    /// <summary>property name</summary>
+	public string name { get; set; }
 
     /// <summary>Method Interact</summary>
 	public void Interact()
