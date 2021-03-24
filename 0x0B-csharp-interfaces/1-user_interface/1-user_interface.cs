@@ -4,7 +4,7 @@ using System;
 public abstract class Base
 {
     /// <summary>name is a public property</summary>
-    public string name;
+    public string name { get; set; }
 
     /// <summary>Function that overrides the ToString meth</summary>
     public override string ToString()
