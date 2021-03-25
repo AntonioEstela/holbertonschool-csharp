@@ -31,11 +31,13 @@ public class Player
          Console.WriteLine($"{this.name} has {this.hp} / {this.maxHp} health");
      }
 
+
     /// <summary>Method that prints who and how many damage a player took</summary>
     public void TakeDamage(float damage)
     {
         if (damage > 0)
         {
+            ValidateHP(this.hp -= damage);
             Console.WriteLine($"{this.name} takes {damage} damage!");
         }
 
@@ -50,6 +52,7 @@ public class Player
     {
         if (heal > 0)
         {
+            ValidateHP(this.hp += heal);
             Console.WriteLine($"{this.name} heals {heal} HP!");
         }
 
@@ -59,7 +62,47 @@ public class Player
         }
     }
 
+    /// <summary>Mehtod that validates the player HP</summary>
+    public void ValidateHP(float newHp)
+    {
+        if (newHp < 0)
+            this.hp = 0;
+
+        else if (newHp > this.maxHp)
+            this.hp = this.maxHp;
+
+        else
+            this.hp = newHp;
+    }
+
+
+    /// <summary>Mehtod that Applies some modifiers</summary>
+    public float ApplyModifier(float baseValue, Modifier modifier)
+    {
+        float returnValue = baseValue;
+        if (modifier == Modifier.Weak)
+            returnValue /= 2;
+
+        else if (modifier ==  Modifier.Strong)
+            returnValue *= 1.5f;
+
+        return returnValue;
+    }
 }
+
+/// <summary>Enumerator that contains modifier values</summary>
+public enum Modifier
+{
+    /// <summary>Modifier value</summary>
+    Weak,
+    /// <summary>Modifier value</summary>
+    Base,
+    /// <summary>Modifier value</summary>
+    Strong
+}
+
+/// <summary>Delegate CalculateModifier</summary>
+public delegate float CalculateModifier(float baseValue, Modifier modifier);
 
 
 /// <summary>Delegate that takes a float value</summary>

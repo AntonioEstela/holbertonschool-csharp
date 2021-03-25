@@ -36,6 +36,7 @@ public class Player
     {
         if (damage > 0)
         {
+            ValidateHP(this.hp -= damage);
             Console.WriteLine($"{this.name} takes {damage} damage!");
         }
 
@@ -50,6 +51,7 @@ public class Player
     {
         if (heal > 0)
         {
+            ValidateHP(this.hp += heal);
             Console.WriteLine($"{this.name} heals {heal} HP!");
         }
 
@@ -59,6 +61,18 @@ public class Player
         }
     }
 
+    /// <summary>Mehtod that validates the player HP</summary>
+    public void ValidateHP(float newHp)
+    {
+        if (newHp < 0)
+            this.hp = 0;
+
+        else if (newHp > this.maxHp)
+            this.hp = this.maxHp;
+
+        else
+            this.hp = newHp;
+    }
 }
 
 
