@@ -44,13 +44,13 @@ public interface ICollectable
 class TestObject : Base, IInteractive, IBreakable, ICollectable
 {
     /// <summary>property durability</summary>
-    public int durability { get; set; }
-
-    /// <summary>property isCollected</summary>
-	public bool isCollected { get; set; }
-	
-    /// <summary>property name</summary>
-	public string name { get; set; }
+   	public int durability { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    
+    ///<summary>Property isCollected</summary>
+    	public bool isCollected { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+   
+   ///<summary>Property isCollected</summary>
+    	public string name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
     /// <summary>Method Interact</summary>
 	public void Interact()
